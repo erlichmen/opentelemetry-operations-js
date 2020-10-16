@@ -29,6 +29,7 @@ const { TraceExporter } = require('@google-cloud/opentelemetry-cloud-trace-expor
 // See https://developers.google.com/identity/protocols/application-default-credentials
 // for more details.
 const provider = new NodeTracerProvider();
+provider.register();
 
 // Initialize the exporter. When your application is running on Google Cloud,
 // you don't need to provide auth credentials or a project id.
